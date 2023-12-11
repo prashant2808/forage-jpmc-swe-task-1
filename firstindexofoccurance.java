@@ -15,13 +15,12 @@ public class firstindexofoccurance {
         int t=sc.nextInt();
         System.out.println(firstocc(arr,0,t));
     }
-    static int firstocc(int [] arr,int i,int t)
+    static int firstocc(int [] arr,int t)
     {
-        if(i==arr.length)
-            return -1;
-        if(arr[i]==t)
-            return i;
-        return firstocc(arr,i+1,t);
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]==t)return i;
+        }
+        return -1;
 
     }
 }
